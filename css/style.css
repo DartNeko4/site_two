@@ -259,10 +259,16 @@ h1 {
    max-width: 460px;
    text-align: center;
 }
+.Remote-first__Extentions a {
+   display: inline-block;
+}
 .Remote-first__Extentions img {
    width: 100%;
    max-width: 200px;
    max-height: 51px;
+}
+.Remote-first__Extentions a:hover {
+   box-shadow: 2px 2px 5px rgba(255, 146, 3, 0.808);
 }
 
 /*---------------------------------------*/
@@ -295,11 +301,9 @@ h1 {
 }
 .developers__review img:last-child {
    padding-right: 0px;
-   
 }
 .developers__icons {
    max-width: 1040px;
-   max-height: 70px;
    display: flex;
    flex-wrap: wrap;
    justify-content: center;
@@ -558,6 +562,7 @@ h1 {
    }
    body._touch ._active .burger_lines {
       right: 15px;
+      position: fixed;
    }
    body._touch ._active .burger_lines div {
       border-bottom: 3px solid #ffffff;
@@ -588,14 +593,19 @@ h1 {
       transition: 1s ease-out;
    }
    body._touch ._active .burger__content__links {
+      position: fixed;
+      overflow-y: scroll;/*----------------for burger skroll---------------------*/
       left: 0;
       transform: translate(0px, 0px) rotate(0deg);
       transition:  1s ease-out;
-      overflow: auto;
    }
    body._touch ._active .burger__btn {
       visibility: hidden;
-
+   }
+   /*в джаве добавляется клас хидден для боди при открытии бургера. 
+   Для класса хиден задаю оверфлоу хиддеен чтобы убрать прокрутку*/
+   ._hidden {
+      overflow: hidden;
    }
    .burger {
       position: relative;
@@ -608,8 +618,8 @@ h1 {
    }
    .burger__content {
       position: absolute;
-      width: 100%;
-      
+      max-width: 100%;
+      max-height: 100%;
    }
    .burger_lines {
       position: absolute;
@@ -617,8 +627,11 @@ h1 {
       right: 125px;
       z-index: 2;
    }
+   .burger__content__link a {
+      display: block;
+   }
    .burger__content__link span {
-      font-size: 54px;
+      font-size: 74px;
    }
    .burger__content__links {
       background: #FFAE33;
@@ -626,19 +639,19 @@ h1 {
       font-size: 44px;
       z-index: 1;
       align-items: center;
-      position: absolute;
+      position: fixed;
       width: 100%;
-      max-height: 1200px;
-      left: -900px;
+      height: 100%;
+      left: -800px;
       transform: translate(0px, 0px) rotate(0deg);
-      transition:  1s ease-out;
+      transition: 1s ease-out;
    }
    .burger__content__links li {
-      margin-right: 0px;
-      margin-bottom: 80px;
+      margin: 0px;
+      margin-bottom: 15%;
    }
    .burger__content__links li:first-child {
-      margin-top: 80px;
+      margin-top: 10%;
    }
    .burger__btn {
       position: absolute;
@@ -693,17 +706,20 @@ h1 {
       padding-top: 100px;
    }
    /*--------------------------------------------------*/
+   .developers {
+      padding-bottom: 20px;
+   }
+   /*--------------------------------------------------*/
    .get-started__items {
       flex-wrap: wrap;
       justify-content: center;
    }
    .left__and__right {
+      margin: 0px;
       margin-bottom: 25px;
    }
    /*-----------------------------------------------------*/
-   .developers__icons {
-      max-height: 300px;
-   }
+
    /*----------------------------------------------------*/
    .bottom__nav__links {
       padding: 48px 28px;
@@ -727,6 +743,13 @@ h1 {
 }
 
 @media (max-width: 425px) {
+   .burger__content__link span {
+      font-size: 42px;
+   }
+   .burger__content__links li {
+      margin-bottom: 20%;
+   }
+   /*-----------------------------------------------*/   
    main {
       padding-bottom: 50px;
    }
@@ -745,9 +768,6 @@ h1 {
    .btn__text {
       margin: 0px 0px 0px 5px;
    }
-   
-   /*--------------------------*/
-   
    /*-----------------------------------------------*/
    .select__text {
       font-size: 34px;
@@ -759,11 +779,10 @@ h1 {
       align-items: center;
       flex-direction: column;
    }
-   .environments__btns__first {
-   }
    .environments__btns a:first-child {
       margin: 0px;
-  }
+      margin-bottom: 10px;
+   }
    /*--------------------------------------------------*/
    .Remote-first__title {
       font-size: 50px;
@@ -775,7 +794,6 @@ h1 {
    }
    /*---------------------------------------------------*/
    .get-started__title {
-      
       line-height: 60px;
    }
    .left__and__right {
