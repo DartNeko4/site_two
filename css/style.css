@@ -1,4 +1,3 @@
-/*Обнуление*/
 *{padding:0;margin:0;border:0;}
 *,*:before,*:after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;}
 :focus,:active{outline:none;}
@@ -14,8 +13,6 @@ a:hover{text-decoration:none;}
 ul li{list-style:none;}
 img{vertical-align:top;}
 h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit;}
-/*--------------------*/
-
 
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@100;300;400;500&display=swap');
 body {
@@ -610,8 +607,6 @@ h1 {
    body._touch ._active .burger__btn {
       visibility: hidden;
    }
-   /*в джаве добавляется клас хидден для боди при открытии бургера. 
-   Для класса хиден задаю оверфлоу хиддеен чтобы убрать прокрутку*/
    ._hidden {
       overflow: hidden;
    }
