@@ -42,7 +42,7 @@ if (isMobile.any()) {
       }
    }
 
-} else {
+} else { 
    document.body.classList.add('_pc');
 }
 /*----------------------add classes------------------------*/
