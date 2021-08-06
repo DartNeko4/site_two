@@ -43,7 +43,16 @@ if (isMobile.any()) {
    }
 
 } else { 
-   document.body.classList.add('_pc');
+   let burgerLines = document.querySelectorAll('.burger_lines');
+   if (burgerLines.length > 0) {
+      for (let index = 0; index < burgerLines.length; index++) {
+      const burgerLine = burgerLines[index];
+      burgerLine.addEventListener("click", function (e) {
+         burgerLine.parentElement.classList.toggle('_active');
+      });
+      }
+   }
+   /*document.body.classList.add('_pc');*/
 }
 /*----------------------add classes------------------------*/
 

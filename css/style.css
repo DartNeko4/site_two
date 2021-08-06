@@ -79,7 +79,6 @@ body a:hover span {
 
 
 /*-------------------------------*/
-
 .main__content {
    padding: 60px 0px 60px 0px;
    display: flex;
@@ -152,7 +151,6 @@ h1 {
 }
 
 /*--------------------------------*/
-
 .select__project {
    padding-bottom: 160px;
 }
@@ -222,7 +220,6 @@ h1 {
 }
 
 /*--------------------------------------*/
-
 .Remote-first {
    padding-top: 177px;
    padding-bottom: 77px;
@@ -269,7 +266,6 @@ h1 {
 }
 
 /*---------------------------------------*/
-
 .developers {
    padding-top: 100px;
    padding-bottom: 100px;
@@ -319,7 +315,6 @@ h1 {
 }
 
 /*-----------------------------------------*/
-
 .get-started {
    padding-top: 110px;
    padding-bottom: 160px;
@@ -473,7 +468,6 @@ h1 {
 }
 
 /*----------------------------------------*/
-
 .bottom__nav {
    background: #F9F9F9;
    padding-bottom: 32px;
@@ -506,7 +500,6 @@ h1 {
    display: flex;
    justify-content: space-between;
    padding: 33px 171px 0px 171px;
-   
 }
 .img__and__text {
    display: flex;
@@ -526,7 +519,6 @@ h1 {
 }
 
 /*----------------------------------------------*/
-
 .footer {
    background: #ECE7E5;
 }
@@ -555,58 +547,103 @@ h1 {
    text-align: center;
    color: rgba(18, 16, 12, 0.7);
 }
-
 /*----------------------------------------------*/
+
+
+@media (max-width: 990px) {
+   .burger__logo img {
+      max-width: 131px;
+      width: 90%;
+   }
+   .burger__content__links li {
+      margin-right: 28px;
+   }
+   .burger__content__links li:last-child {
+      margin-right: 10px;
+   }
+}
 
 @media (max-width: 768px) {
    /*----------------------------------------------------------*/
+   .burger_lines {
+      position: absolute;
+      top: 22px;
+      right: 125px;
+      z-index: 2;
+      display: flex;
+      height: 25px;
+      width: 25px;
+      flex-wrap: wrap;
+   }
    .burger_lines div {
-      margin-bottom: 5px;
       width: 25px;
       border-bottom: 3px solid #FFAE33;
+      padding-bottom: 5px;
    }
-   body._touch ._active .burger_lines {
-      right: 15px;
+   .burger_lines p {
+      width: 12.5px;
+      border-bottom: 3px solid #FFAE33;
+      padding-bottom: 5px;
+
+   }
+._active .burger_lines {
+      right: 25px;
       position: fixed;
+      transition: 1s ease-out;
    }
-   body._touch ._active .burger_lines div {
+   .burger_lines {
+      transition: 1s ease-out;
+   }
+   ._active .burger_lines div, 
+   ._active .burger_lines p {
       border-bottom: 3px solid #ffffff;
    }
-   body._touch ._active .burger-line__one {
-      transform: translate(0px, 8px) rotate(40deg);
+   ._active .burger-line__one {
+      transform: translate(4px, 9px) rotate(45deg);
       transition:  1s ease-out;
+      transition-delay: 1s;
    }
-   body._touch .burger-line__one {
+   .burger-line__one {
       transform: translate(0px, 0px) rotate(0deg);
       transition:  1s ease-out;
    }
-   body._touch ._active .burger-line__two {
-      transform: translate(0px, 0px) rotate(-40deg);
+   ._active .burger-line__two {
+      transform: translate(0px, -8px) rotate(-45deg);
       transition:  1s ease-out;
+      transition-delay: 1s;
    }
-   body._touch .burger-line__two {
+   .burger-line__two {
       transform: translate(0px, 0px) rotate(0deg);
       transition:  1s ease-out;
    }
-   body._touch ._active .burger-line__three {
+   ._active .burger-line__p-one {
       visibility: hidden;
-      transform: translate(0px, 5px) rotate(180deg);
-      transition: 1s ease-out;
+      transform: translate(-12.5px, 0px) rotate(0deg);
       -webkit-transition: background-color 6s;
    }
-   body._touch .burger-line__three {
+   .burger_lines .burger-line__p-one {
       transition: 1s ease-out;
    }
-   body._touch ._active .burger__content__links {
+   ._active .burger-line__p-two {
+      visibility: hidden;
+      transform: translate(12.5px, 0px) rotate(0deg);
+      -webkit-transition: background-color 6s;
+   }
+   .burger_lines .burger-line__p-two {
+      transition: 1s ease-out;
+   }
+   ._active .burger__content__links {
       position: fixed;
       overflow-y: scroll;/*----------------for burger skroll---------------------*/
       left: 0;
       transform: translate(0px, 0px) rotate(0deg);
-      transition:  1s ease-out;
+      transition:  1.5s ease-out;
    }
-   body._touch ._active .burger__btn {
+   ._active .burger__btn {
       visibility: hidden;
    }
+   /*в джаве добавляется клас хидден для боди при открытии бургера. 
+   Для класса хиден задаю оверфлоу хиддеен чтобы убрать прокрутку*/
    ._hidden {
       overflow: hidden;
    }
@@ -623,12 +660,6 @@ h1 {
       position: absolute;
       max-width: 100%;
       max-height: 100%;
-   }
-   .burger_lines {
-      position: absolute;
-      top: 27px;
-      right: 125px;
-      z-index: 2;
    }
    .burger__content__link a {
       display: block;
@@ -734,7 +765,7 @@ h1 {
    }
    .bottom__nav__socials {
       padding: 33px 100px 0px 100px;
-  }
+   }
    /*----------------------------------------------------*/
    .privacy {
       padding-right: 5px;
@@ -808,10 +839,9 @@ h1 {
       padding: 20px 0px 48px 0px;
       
    }
-   
    .bottom__nav__socials {
       padding: 43px 0px 20px 0px;
-  }
+   }
    /*------------------------------------------------*/
    .privacy {
       font-size: 12px;
