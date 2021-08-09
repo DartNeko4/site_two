@@ -588,6 +588,17 @@ h1 {
 /*----------------------------------------------*/
 
 
+@media (max-width: 1200px) {
+   .right__column__item {
+      max-height: 74px;
+   }
+   .right__column__item:first-child a {
+      height: 42px;
+   }
+   .left__and__right {
+      padding: 56px 36px 86px 36px;
+   }
+}
 @media (max-width: 990px) {
    .burger__logo img {
       max-width: 131px;
@@ -639,7 +650,7 @@ h1 {
    }
    ._active .burger-line__one, ._active .burger-line__two{
       transition:  1s ease-out;
-      transition-delay: 1s;
+      transition-delay: 0.7s;
    } 
    .burger-line__one, .burger-line__two {
       transform: translate(0px, 0px) rotate(0deg);
@@ -652,6 +663,7 @@ h1 {
       visibility: hidden;
       transform: translate(-12.5px, 0px) rotate(0deg);
       -webkit-transition: background-color 6s;
+      opacity: 0;
    }
    .burger_lines .burger-line__p-one {
       transition: 1s ease-out;
@@ -660,6 +672,7 @@ h1 {
       visibility: hidden;
       transform: translate(12.5px, 0px) rotate(0deg);
       -webkit-transition: background-color 6s;
+      opacity: 0;
    }
    .burger_lines .burger-line__p-two {
       transition: 1s ease-out;
@@ -669,7 +682,7 @@ h1 {
       overflow-y: scroll;/*----------------for burger skroll---------------------*/
       left: 0;
       transform: translate(0px, 0px) rotate(0deg);
-      transition:  1.5s ease-out;
+      transition:  1s ease-out;
    }
    ._active .burger__btn {
       visibility: hidden;
@@ -743,6 +756,9 @@ h1 {
       padding: 12px 12px;
       flex-direction: column;
       align-items: center;
+   }
+   .right__column__item:first-child a {
+      height: 32px;
    }
    /*--------------------------------------------------*/
    .select__project {
